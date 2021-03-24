@@ -30,7 +30,7 @@ RUN apt-get update; \
 WORKDIR /app
 RUN git clone --recursive https://github.com/maoe/openblas-src.git; \
     cd openblas-src; \
-    git checkout print-config
+    git checkout print-config-fix
 WORKDIR /app/openblas-src/openblas-src
 RUN cargo run --example config --features static
 
