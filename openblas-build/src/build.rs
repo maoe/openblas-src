@@ -188,6 +188,8 @@ impl Configure {
         if let Some(target) = self.target.as_ref() {
             args.push(format!("TARGET={:?}", target))
         }
+        args.push("USE_THREAD=0".into());
+        args.push("USE_LOCKING=1".into());
         args
     }
 
